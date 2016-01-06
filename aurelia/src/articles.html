@@ -1,0 +1,28 @@
+<template>
+<div class="container">
+    <h2>${heading}</h2>
+    <br>
+    <button class="btn btn-primary" click.trigger="addArticle()">Add new article</button><br><br>
+    
+    <table class="table">
+      <tr>
+        <td>ID</td>
+        <td>Article name</td>
+        <td>Article slug</td>
+        <td>Created</td>
+        <td>Edit</td>
+        <td>Delete</td>
+      </tr>
+
+      <tr repeat.for="article of articles">
+        <td>${article.id}</td>
+        <td>${article.article_name}</td>
+        <td>${article.article_slug}</td>
+        <td>${article.created}</td>
+        <td><button class="btn btn-warning" click.trigger="editArticle(article.id)">Edit</button></td>
+        <td><button class="btn btn-danger" click.trigger="deleteArticle(article.id)">Delete</button></td>
+      </tr>
+      
+    </table>
+  </div>
+</template>

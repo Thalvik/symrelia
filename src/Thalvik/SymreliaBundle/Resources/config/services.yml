@@ -1,0 +1,5 @@
+services:
+    thalvik_symrelia.form.type.article:
+        class: Thalvik\SymreliaBundle\Form\ArticleType
+        tags:
+          - { name: form.type, alias: article }

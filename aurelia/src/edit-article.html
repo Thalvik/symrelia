@@ -1,0 +1,22 @@
+<template>
+  <ai-dialog>
+    <ai-dialog-header>Article information</ai-dialog-header>
+
+    <ai-dialog-body>
+      <div class="form-group">
+        <label for="article_name">Article name</label>
+        <input name="article_name" type="text" class="form-control" value.bind="article.articleName" required="true">
+      </div>
+
+      <div class="form-group">
+        <label for="article_slug">Article slug</label>
+        <input name="article_slug" type="text" class="form-control" value.bind="article.articleSlug" required="true">
+      </div>
+    </ai-dialog-body>
+
+    <ai-dialog-footer>
+      <button class="btn btn-warning" click.trigger="controller.cancel()">Cancel</button>
+      <button class="btn btn-success" click.trigger="controller.ok(article)">Ok</button>
+    </ai-dialog-footer>
+  </ai-dialog>
+</template>

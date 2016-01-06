@@ -1,0 +1,4 @@
+symrelia_api:
+    type:     rest
+    prefix:   /api
+    resource: "@ThalvikSymreliaBundle/Resources/config/routing.yml"
